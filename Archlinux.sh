@@ -64,7 +64,7 @@ elif [[ $arg1 == "BIOS" ]]; then
   #mount /dev/nvme0n1p1 /mnt
 fi
 
-cp scripts-in-new-root /mnt
+cp scripts-in-new-root /mnt -r
 pacman -Sy
 pacstrap /mnt base base-devel linux linux-firmware vim networkmanager man-db man-pages iwd dhcpcd
 genfstab -U /mnt >>/mnt/etc/fstab

@@ -57,7 +57,7 @@
 - example: 
 
 ```
-  > ./Archlinux.sh UEFI sdb
+  > ./Archlinux.sh UEFI /dev/sdb
 ```
 
 - after the script finished, you should not see a red root text anymore, but a grey one, this is because your root has been moved
