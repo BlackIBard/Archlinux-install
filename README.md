@@ -38,7 +38,7 @@
 
 ---
 
-## Steps to continue the installation (with boot-stick inserted)```
+## Steps to continue the installation (with boot-stick inserted)
 
 1. Install git and clone this repository and cd into it
 ```
@@ -86,7 +86,7 @@ Afterwards run the second script, this installs your bootloader so your machine 
   > reboot
 ```
 
-<br>
+---
 
 # Optional Steps (no booting device needed)
 
