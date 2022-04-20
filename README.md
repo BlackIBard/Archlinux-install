@@ -90,7 +90,7 @@ Afterwards run the second script, this installs your bootloader so your machine 
 
 # Optional Steps
 
-- If you want to completely finish the arch installation and don't want to bother about doing it yourself, you can just simple use the gnome-install.sh, the i3-install.sh script, or my i3 installation script, which will be in the scripts-in-new-root folder, in your root directory. 
+- If you want to completely finish the arch installation and don't want to bother about doing it yourself, you can just simple use the gnome-install.sh, the i3-install.sh script, or my i3-install-with-my-config.sh script, which will be in the scripts-in-new-root folder, in your root directory. 
 **Important: Follow the steps of [connecting to the internet](#connect-to-the-internet) to connect to the internet, or at least the ping command must succeed.**
 
 ```
