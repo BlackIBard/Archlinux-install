@@ -1,20 +1,11 @@
 #!/bin/bash
 
-echo "Specify PC hostname:"
-
-read HOSTNAME
-
-if [[ $HOSTNAME == "" ]]; then
+if [[ $1 == "" ]]; then
 	echo "You have to specify a hostname for your machine!"
 	exit 0
 fi
 
-echo "Username:"
-
-read USERNAME
-passwd $USERNAME
-
-if [[ $USERNAME == "" ]]; then
+if [[ $2 == "" ]]; then
 	echo "You have to enter a username!"
 	exit 0
 fi
@@ -25,12 +16,16 @@ vim /etc/locale.gen
 locale-gen
 echo "LANG=de_DE.UTF-8" > /etc/locale.conf
 echo "KEYMAP=de-latin1-nodeadkeys" > /etc/vconsole.conf
-echo "${HOSTNAME}" > /etc/hostname
-useradd $USERNAME
-usermod -aG wheel $USERNAME
+
+echo "${1}" > /etc/hostname
+useradd $2
+usermod -aG wheel $2
 EDITOR=/usr/bin/vim visudo
-mkdir /home/$USERNAME
-chown -R "${USERNAME}":wheel /home/$USERNAME
+mkdir /home/$2
+chown -R "${2}":wheel /home/$2
+
+passwd $2
+passwd root
 
 mkinitcpio -P linux
 pacman -S grub efibootmgr dosfstools gptfdisk iwd dhcpcd
