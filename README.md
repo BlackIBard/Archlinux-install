@@ -2,10 +2,15 @@
 
 ## Connect to the internet
 
+1. First load your specific keyboard layout with loadkeys
 
-1. For Ethernet: congrats you don't have to do anything, the ethernet connection should work out of the box
+```
+  > loadkeys [your language ex. de]
+```
 
-2. For Wifi: please type the steps below exactly like that into your terminal (program being used iwctl)
+2. For Ethernet: congrats you don't have to do anything, the ethernet connection should work out of the box
+
+3. For Wifi: please type the steps below exactly like that into your terminal (program being used iwctl)
 
 ```
   > iwctl (you will now see iwctl at the start of your command line for the commands below)
@@ -17,7 +22,7 @@
   [iwd]# quit
 ```
 
-3. Finally check if the ping command is working, **DONT PROCEED IF THIS IS NOT WORKING**
+4. Finally check if the ping command is working, **DONT PROCEED IF THIS IS NOT WORKING**
   (you can try systemctl restart dhcpcd, to fix possible errors)
 
 ```
@@ -28,21 +33,15 @@
 
 ---
 
-## Steps to continue the installation (with boot-stick inserted)
+## Steps to continue the installation (with boot-stick inserted)```
 
-1. First load your specific keyboard layout with loadkeys
-
-```
-  > loadkeys [your language ex. de]
-```
-
-2. Clone this repository and cd into it
+1. Clone this repository and cd into it
 ```
   > git clone https://github.com/BlackIBard/Lorenz-Arch.git
   > cd Lorenz-Arch
 ```
 
-3. Now you are ready to execute the first installation script, here the base kit of Arch Linux gets installed, you can choose between BIOS or UEFI ([Archlinux](https://wiki.archlinux.org/title/installation_guide)). After you have chosen your bootmode, continue with to lookup the drive, on which you want to install your Archlinux.
+2. Now you are ready to execute the first installation script, here the base kit of Arch Linux gets installed, you can choose between BIOS or UEFI ([Archlinux](https://wiki.archlinux.org/title/installation_guide)). After you have chosen your bootmode, continue with to lookup the drive, on which you want to install your Archlinux.
 **This script does completely erase all of your existing partitions on the drive you specify, SO YOU HAVE TO KNOW WHAT YOU ARE DOING!!!** (TODO dualboot script)
 
 ```
@@ -52,9 +51,9 @@
   after the script finished, you should not see a red root text anymore, but a grey one, this is because your root has been moved
 ```
 
-4. Again follow the steps from section [connect to the internet](#connect-to-the-internet) and only continue if the ping command succeeds.
+3. Again follow the steps from section [connect to the internet](#connect-to-the-internet) and only continue if the ping command succeeds.
 
-5. Change your current directory to "scripts-in-new-root". 
+4. Change your current directory to "scripts-in-new-root". 
 Afterwards run the second script, this installs your bootloader so your machine can boot into linux, without boot drive. The script will ask you for a hostname, an username and a password for that user. The hostname specifies the name of your PC, the username specifies the name of your user, which you will be using for future logins. When the scripts asks you for a password, it will first ask for your user with username, then for the root user. 
 **BE CAREFUL TO REMEMBER YOUR USERNAME, YOUR PASSWORD AND THE PASSWORD FOR THE ROOT USER**
 
@@ -63,7 +62,7 @@ Afterwards run the second script, this installs your bootloader so your machine 
   > ./grub-install.sh [some hostname, can be anything] [username, again can be anything]
 ```
 
-6. Your system should now be ready for a shutdown or a reboot, also you should remove the booting device, since you want to see if arch was successfully installed and is booting from your machine. Use **one** of the following:
+5. Your system should now be ready for a shutdown or a reboot, also you should remove the booting device, since you want to see if arch was successfully installed and is booting from your machine. Use **one** of the following:
 ```
   > shutdown now
 ```
