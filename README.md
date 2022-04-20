@@ -81,21 +81,21 @@ Afterwards run the second script, this installs your bootloader so your machine 
 - If you want to completely finish the arch installation and don't want to bother about doing it yourself, you can just simple use the gnome-install.sh or the i3-install.sh script, which will be in the scripts-in-new-root folder, in your root directory.
 
 ```
-> cd /
+> cd /scripts-in-new-root
 > ./gnome-install.sh
 ```
 
 - **OR**
-```
 
-> cd /
+```
+> cd /scripts-in-new-root
 > ./i3-install.sh
 ```
 
 - **OR**
 
 ```
-> cd /
+> cd /scripts-in-new-root
 > ./i3-install-with-my-config.sh
 ```
 
