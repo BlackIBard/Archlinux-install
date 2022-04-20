@@ -66,15 +66,16 @@
 3. Again follow the steps from section [connect to the internet](#connect-to-the-internet) and only continue if the ping command succeeds.
 
 4. Change your current directory to "scripts-in-new-root". 
-Afterwards run the second script, this installs your bootloader so your machine can boot into linux, without boot drive. The script will ask you for a hostname, an username and a password for that user. The hostname specifies the name of your PC, the username specifies the name of your user, which you will be using for future logins. When the scripts asks you for a password, it will first ask for your user with username, then for the root user. 
+Afterwards run the second script, this installs your bootloader so your machine can boot into linux, without boot drive. The script will ask you for a hostname, an username and a password for that user. The hostname specifies the name of your PC, the username specifies the name of your user, which you will be using for future logins. When the scripts asks you for a password, it will first ask for your user with username, then for the root user. In a part of the script you will see blue text with # at the beginning, this is the language file, where you can define, which language you want for your Archlinux to have, you do that by removing the # before the language you chose. Afterwards you will again see this blue text, there you have to remove the # before the wheel:wheel All ... entry. After the script finished, use exit to return to the red root text, here you are able to shutdown or reboot the machine.
 **BE CAREFUL TO REMEMBER YOUR USERNAME, YOUR PASSWORD AND THE PASSWORD FOR THE ROOT USER.**
 
 ```
   > cd scripts-in-new-root
   > ./grub-install.sh [some hostname, can be anything] [username, again can be anything]
+  > exit
 ```
 
-5. Your system should now be ready for a shutdown or a reboot, also you should remove the booting device, since you want to see if arch was successfully installed and is booting from your machine. Use **one** of the following:
+5. Your system should now be ready for a shutdown or a reboot, also you should **remove the booting device**, since you want to see if arch was successfully installed and is booting from your machine. Use **one** of the following:
 ```
   > shutdown now
 ```
@@ -89,7 +90,8 @@ Afterwards run the second script, this installs your bootloader so your machine 
 
 # Optional Steps
 
-- If you want to completely finish the arch installation and don't want to bother about doing it yourself, you can just simple use the gnome-install.sh or the i3-install.sh script, which will be in the scripts-in-new-root folder, in your root directory.
+- If you want to completely finish the arch installation and don't want to bother about doing it yourself, you can just simple use the gnome-install.sh, the i3-install.sh script, or my i3 installation script, which will be in the scripts-in-new-root folder, in your root directory. 
+**Important: Follow the steps of [connecting to the internet](#connect-to-the-internet) to connect to the internet, or at least the ping command must succeed.**
 
 ```
 > cd /scripts-in-new-root
