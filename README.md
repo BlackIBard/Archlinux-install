@@ -67,7 +67,7 @@
 
 4. Change your current directory to "scripts-in-new-root". 
 Afterwards run the second script, this installs your bootloader so your machine can boot into linux, without boot drive. The script will ask you for a hostname, an username and a password for that user. The hostname specifies the name of your PC, the username specifies the name of your user, which you will be using for future logins. When the scripts asks you for a password, it will first ask for your user with username, then for the root user. 
-**BE CAREFUL TO REMEMBER YOUR USERNAME, YOUR PASSWORD AND THE PASSWORD FOR THE ROOT USER**
+**BE CAREFUL TO REMEMBER YOUR USERNAME, YOUR PASSWORD AND THE PASSWORD FOR THE ROOT USER.**
 
 ```
   > cd scripts-in-new-root
