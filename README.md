@@ -27,6 +27,11 @@
 
 ```
   > ping www.google.de (**THIS MUST BE WORKING**)
+```
+
+- In case of an error you can try the following
+
+```
   > systemctl restart dhcpcd (may take a few minutes)
   > systemctl status dhcpcd (for you in order to check if dhcpcd is active already)
 ```
@@ -35,8 +40,9 @@
 
 ## Steps to continue the installation (with boot-stick inserted)```
 
-1. Clone this repository and cd into it
+1. Install git and clone this repository and cd into it
 ```
+  > pacman -Sy git (always just press enter if it asks you for anything)
   > git clone https://github.com/BlackIBard/Lorenz-Arch.git
   > cd Lorenz-Arch
 ```
