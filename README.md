@@ -52,10 +52,16 @@
 
 ```
   > ./Archlinux.sh [UEFI/BIOS] [use fdisk -l to look for the drive you want to use, don't use the partition of a disk]
-  example: 
-  > ./Archlinux.sh UEFI sdb
-  after the script finished, you should not see a red root text anymore, but a grey one, this is because your root has been moved
 ```
+
+- example: 
+
+```
+  > ./Archlinux.sh UEFI sdb
+```
+
+- after the script finished, you should not see a red root text anymore, but a grey one, this is because your root has been moved
+
 
 3. Again follow the steps from section [connect to the internet](#connect-to-the-internet) and only continue if the ping command succeeds.
 
