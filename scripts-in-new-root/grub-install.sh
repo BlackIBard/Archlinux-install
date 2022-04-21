@@ -28,7 +28,7 @@ passwd $2
 passwd root
 
 mkinitcpio -P linux
-pacman -S grub efibootmgr dosfstools gptfdisk iwd dhcpcd
+pacman -S grub efibootmgr dosfstools gptfdisk iwd dhcpcd --noconfirm
 sudo systemctl enable iwd
 sudo systemctl start iwd
 sudo systemctl enable dhcpcd

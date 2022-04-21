@@ -65,7 +65,7 @@ elif [[ $arg1 == "BIOS" ]]; then
 fi
 
 cp scripts-in-new-root /mnt -r
-pacman -Sy
-pacstrap /mnt base base-devel linux linux-firmware vim networkmanager man-db man-pages iwd dhcpcd
+pacman -Sy --noconfirm
+pacstrap /mnt base base-devel linux linux-firmware vim networkmanager man-db man-pages iwd dhcpcd --noconfirm
 genfstab -U /mnt >>/mnt/etc/fstab
 arch-chroot /mnt
