@@ -44,7 +44,7 @@
 
 1. Install git and clone this repository and cd into it
 ```
-  > pacman -Sy git (always just press enter if it asks you for anything)
+  > pacman -Sy git --noconfirm
   > git clone https://github.com/BlackIBard/Lorenz-Arch.git
   > cd Lorenz-Arch
 ```
