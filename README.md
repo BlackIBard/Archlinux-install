@@ -46,7 +46,7 @@
 ```
   > pacman -Sy git --noconfirm
   > git clone https://github.com/BlackIBard/Archlinux-install.git
-  > cd Lorenz-Arch
+  > cd Archlinux-install
 ```
 
 2. Now you are ready to execute the first installation script, here the base kit of Arch Linux gets installed, you can choose between BIOS or UEFI ([see difference here](https://wiki.archlinux.org/title/installation_guide)). After you have chosen your bootmode, continue to lookup the drive, on which you want to install your Archlinux.
