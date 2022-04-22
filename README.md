@@ -45,7 +45,7 @@
 1. Install git and clone this repository and cd into it
 ```
   > pacman -Sy git --noconfirm
-  > git clone https://github.com/BlackIBard/Lorenz-Arch.git
+  > git clone https://github.com/BlackIBard/Archlinux-install.git
   > cd Lorenz-Arch
 ```
 
